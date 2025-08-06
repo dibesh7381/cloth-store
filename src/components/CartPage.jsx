@@ -44,7 +44,7 @@ const CartPage = () => {
               </div>
 
               {/* Quantity */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
                 <button
                   onClick={() => dispatch(decrementQty(item.id))}
                   className="px-2 py-1 bg-gray-200 rounded"
@@ -64,7 +64,7 @@ const CartPage = () => {
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => dispatch(removeFromCart(item.id))}
-                  className="text-red-500 text-sm underline"
+                  className="bg-black text-white text-sm px-4 py-1 rounded hover:bg-gray-800"
                 >
                   Remove
                 </button>
@@ -82,12 +82,21 @@ const CartPage = () => {
         <div className="text-xl font-bold mb-3 sm:mb-0">
           Total: ₹{total.toFixed(2)}
         </div>
+        <div className="flex gap-3">
+              <button
+          onClick={() => dispatch(clearCart())}
+          className="bg-red-500 text-white px-5 py-2 rounded hover:bg-red-600 text-sm"
+        >
+          Buy All
+        </button>
         <button
           onClick={() => dispatch(clearCart())}
           className="bg-red-500 text-white px-5 py-2 rounded hover:bg-red-600 text-sm"
         >
           Remove All
         </button>
+        </div>
+       
       </div>
     </div>
   );

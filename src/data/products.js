@@ -47,6 +47,22 @@ const products = [
     category: "Women",
     size: "L",
   },
+  {
+    id: 7,
+    name: "Tshirts",
+    image: "https://d1ejm5im4bv2vf.cloudfront.net/pub/media/catalog/product/b/h/bhagwan_kasam_navy_blue_tshirt_model.jpg",
+    price: 499,
+    category: "Women",
+    size: "L",
+  },
+  {
+    id: 8,
+    name: "Tshirts",
+    image: "https://m.media-amazon.com/images/I/51qIDBmbU5L._UY1100_.jpg",
+    price: 499,
+    category: "Kids",
+    size: "L",
+  },
 ];
 
 export default products;

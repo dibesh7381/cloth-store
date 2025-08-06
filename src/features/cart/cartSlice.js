@@ -31,7 +31,14 @@ const cartSlice = createSlice({
     },
     decrementQty: (state, action) => {
       const item = state.cartItems.find(i => i.id === action.payload);
-      if (item && item.qty > 1) item.qty--;
+      if (item) {
+         if (item.qty <= 1){
+           state.cartItems = state.cartItems.filter(i => i.id !== action.payload)
+         }
+         else{
+            item.qty -= 1
+         }
+      }
       saveToLocalStorage(state.cartItems);
     },
     removeFromCart: (state, action) => {

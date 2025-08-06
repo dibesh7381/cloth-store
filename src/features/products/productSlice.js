@@ -5,6 +5,7 @@ const initialState = {
   allProducts: productsData,
   filteredProducts: productsData,
   selectedCategory: "All",
+  selectedProduct: null, // 👈 for modal
 };
 
 const productsSlice = createSlice({
@@ -21,9 +22,19 @@ const productsSlice = createSlice({
         );
       }
     },
+    setSelectedProduct: (state, action) => {
+      state.selectedProduct = action.payload;
+    },
+    clearSelectedProduct: (state) => {
+      state.selectedProduct = null;
+    },
   },
 });
 
-export const { filterByCategory } = productsSlice.actions;
+export const {
+  filterByCategory,
+  setSelectedProduct,
+  clearSelectedProduct,
+} = productsSlice.actions;
 export default productsSlice.reducer;
 

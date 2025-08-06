@@ -63,6 +63,22 @@ const products = [
     category: "Kids",
     size: "L",
   },
+  {
+    id: 9,
+    name: "Sarees",
+    image: "https://www.vastranand.in/cdn/shop/files/4_e693d171-19f2-4c65-9bff-eb8ffd847745.jpg?v=1743078788",
+    price: 999,
+    category: "Women",
+    size: "L",
+  },
+  {
+    id: 10,
+    name: "Track Pants",
+    image: "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/26766100/2024/3/22/f0bf1156-c8d0-476b-82d9-fefa38ef53771711091962396-ADIDAS-Originals-Men-Track-Pants-2451711091961910-1.jpg",
+    price: 999,
+    category: "Men",
+    size: "L",
+  },
 ];
 
 export default products;

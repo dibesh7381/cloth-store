@@ -4,7 +4,7 @@ import {
   incrementQty,
   decrementQty,
 } from "../features/cart/cartSlice";
-import { setSelectedProduct } from "../features/products/productSlice";
+
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -16,7 +16,6 @@ const ProductCard = ({ product }) => {
   return (
     <div
       className="w-full bg-white border rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer"
-      onClick={() => dispatch(setSelectedProduct(product))} // 👈 open modal
     >
       <img
         src={product.image}
